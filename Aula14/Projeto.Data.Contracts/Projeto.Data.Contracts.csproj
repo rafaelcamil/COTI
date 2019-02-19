@@ -48,5 +48,14 @@
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aula14\Projeto.Entities\Projeto.Entities.csproj">
+      <Project>{e7d00a7b-0e9b-49a1-b6b1-3d5a48a1acda}</Project>
+      <Name>Projeto.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
