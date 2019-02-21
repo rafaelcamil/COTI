@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E416864E-611F-4BFD-8203-53D9FEFC43F9}</ProjectGuid>
+    <ProjectGuid>{6CAB606E-A57B-4F4F-938F-A0DB228F4700}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projeto.Data.Contracts</RootNamespace>
-    <AssemblyName>Projeto.Data.Contracts</AssemblyName>
+    <RootNamespace>Projeto.Business.Contracts</RootNamespace>
+    <AssemblyName>Projeto.Business.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,11 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\IBaseRepository.cs" />
-    <Compile Include="Repositories\IFuncaoRepository.cs" />
-    <Compile Include="Repositories\IFuncionarioRepository.cs" />
-    <Compile Include="Repositories\ISetorRepository.cs" />
-    <Compile Include="Repositories\IUnitOfWork.cs" />
+    <Compile Include="IBaseBusiness.cs" />
+    <Compile Include="IFuncaoBusiness.cs" />
+    <Compile Include="IFuncionarioBusiness.cs" />
+    <Compile Include="ISetorBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +53,5 @@
       <Name>Projeto.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

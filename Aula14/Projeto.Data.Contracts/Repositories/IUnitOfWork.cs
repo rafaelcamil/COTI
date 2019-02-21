@@ -12,6 +12,8 @@ namespace Projeto.Data.Contracts
         void Commit();
         void Rollback();
 
+        void SaveChanges();
+
         ISetorRepository SetorRepository { get; }
         IFuncaoRepository FuncaoRepository { get; }
         IFuncionarioRepository FuncionarioRepository { get; }

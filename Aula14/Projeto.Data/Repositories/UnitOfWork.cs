@@ -45,5 +45,10 @@ namespace Projeto.Data.Repositories
         {
             context.Dispose();
         }
+
+        public void SaveChanges()
+        {
+            context.SaveChanges();
+        }
     }
 }
