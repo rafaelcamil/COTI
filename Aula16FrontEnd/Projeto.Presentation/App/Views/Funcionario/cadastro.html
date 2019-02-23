@@ -1,0 +1,51 @@
+﻿<h4>Cadastro de Funcionário</h4>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+
+        <label>Nome do Funcionário</label>
+        <input type="text" class="form-control"
+               placeholder="Nome do Funcionário" />
+        <br />
+
+        <label>Salário</label>
+        <input type="text" class="form-control"
+               placeholder="Salário" />
+        <br />
+
+        <label>Data de Admissão</label>
+        <input type="date" class="form-control"
+               placeholder="Nome do Funcionário" />
+        <br />
+
+        <label>Selecione a função</label>
+        <select class="form-control" ng-init="carregarFuncoes()">
+            <option value="">Escolhar uma opção</option>
+            <option value="{{f.IdFuncao}}" ng-repeat="f in funcoes">
+                {{f.Nome}}
+            </option>
+        </select>
+        <br />
+
+        <label>Selecione o setor</label>
+        <select class="form-control" ng-init="carregarSetores()">
+            <option value="">Escolhar uma opção</option>
+            <option value="{{s.IdSetor}}" ng-repeat="s in setores">
+                {{s.Nome}}
+            </option>
+        </select>
+        <br />
+
+        <button class="btn btn-success" ng-click="cadastrar()">
+            Cadastrar Funcionário
+        </button>
+        <br />
+        <br />
+
+        <strong>{{mensagem}}</strong>
+    </div>
+
+
+
+</div>
