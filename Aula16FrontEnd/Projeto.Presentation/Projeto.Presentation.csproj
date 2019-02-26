@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Controllers\Funcionario\funcionario-cadastro-controller.js" />
+    <Content Include="App\Controllers\Funcionario\funcionario-consulta-controller.js" />
     <Content Include="App\principal.js" />
     <Content Include="App\Routes\rotas.js" />
     <Content Include="App\Services\funcao-service.js" />

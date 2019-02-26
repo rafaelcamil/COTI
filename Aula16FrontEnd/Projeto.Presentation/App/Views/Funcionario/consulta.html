@@ -1,1 +1,74 @@
 ﻿<h4>Consulta de Funcionário</h4>
+<br />
+
+<div>
+    <strong>{{mensagem}}</strong>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <label>Pesquisar:</label>
+        <input type="text" class="form-control"
+               placeholder="Digite aqui" ng-model="filtro"/>
+    </div>
+    <div class="col-md-3">
+        <label>Ordenar por:</label>
+        <select class="form-control" ng-model="ordenacao">
+            <option value="">Selecione</option>
+            <option value="IdFuncionario">Código</option>
+            <option value="Nome">Nome do Funcionário</option>
+            <option value="Salario">Salário</option>
+            <option value="DataAdmissao">Admissão</option>
+            <option value="NomeSetor">Setor</option>
+            <option value="NomeFuncao">Função</option>
+        </select>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table table-hover table-bordered table-striped"
+               ng-init="consultarFuncionarios()">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome do Funcionário</th>
+                    <th>Salário</th>
+                    <th>Admissão</th>
+                    <th>Setor</th>
+                    <th>Função</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="f in funcionarios| filter: filtro | orderBy: ordenacao">
+                    <td>{{f.IdFuncionario}}</td>
+                    <td>{{f.Nome}}</th>
+                    <td>{{f.Salario| currency: 'R$'}}</td>
+                    <td>{{f.DataAdmissao|date : 'dd/MM/yyyy'}}</td>
+                    <td>{{f.NomeSetor}}</td>
+                    <td>{{f.NomeFuncao}}</td>
+                    <td width="200">
+                        <button class="btn btn-primary btn-sm">
+                            Atualizar
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        Quantidade de funcionários: {{(funcionarios| filter:filtro).length}}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</div>
+<br />

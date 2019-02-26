@@ -6,21 +6,24 @@
 
         <label>Nome do Funcionário</label>
         <input type="text" class="form-control"
-               placeholder="Nome do Funcionário" />
+               placeholder="Nome do Funcionário"
+               ng-model="funcionario.Nome"/>
         <br />
 
         <label>Salário</label>
         <input type="text" class="form-control"
-               placeholder="Salário" />
+               placeholder="Salário" 
+               ng-model="funcionario.Salario" />
         <br />
 
         <label>Data de Admissão</label>
         <input type="date" class="form-control"
-               placeholder="Nome do Funcionário" />
+               placeholder="Nome do Funcionário"
+               ng-model="funcionario.DataAdmissao" />
         <br />
 
         <label>Selecione a função</label>
-        <select class="form-control" ng-init="carregarFuncoes()">
+        <select class="form-control" ng-model="funcionario.IdFuncao" ng-init="carregarFuncoes()">
             <option value="">Escolhar uma opção</option>
             <option value="{{f.IdFuncao}}" ng-repeat="f in funcoes">
                 {{f.Nome}}
@@ -29,7 +32,8 @@
         <br />
 
         <label>Selecione o setor</label>
-        <select class="form-control" ng-init="carregarSetores()">
+        <select class="form-control" ng-model="funcionario.IdSetor"
+                ng-init="carregarSetores()">
             <option value="">Escolhar uma opção</option>
             <option value="{{s.IdSetor}}" ng-repeat="s in setores">
                 {{s.Nome}}
